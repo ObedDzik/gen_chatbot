@@ -1,0 +1,1 @@
+A simple retrieval augmented chatbot integrated with streamlit to retrieve useful data based on user prompt.

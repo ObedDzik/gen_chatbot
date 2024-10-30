@@ -8,7 +8,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import OllamaEmbeddings
 
-loader = DirectoryLoader(r"C:\Users\okdzi\OneDrive\Desktop\feast\Testimonies\Academic_Excellence_Scholarship", glob="**/*.docx")
+loader = DirectoryLoader(r"C:\Users\okdzi\OneDrive\Desktop\feast\Testimonies", glob="**/*.docx")
 docs = loader.load()
 llm = OllamaLLM(model='llama3.1')
 embeddings = OllamaEmbeddings(model="llama3")
@@ -43,6 +43,4 @@ st.title("Retrieve Testimonials Chatbot")
 input_txt = st.text_input("Ask your question!")
 if input_txt:
     st.write(qa_chain.invoke(input_txt))
-# question = "Can you share a testimony on scholarship"
 
-# qa_chain.invoke(question)
